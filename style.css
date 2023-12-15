@@ -1,0 +1,131 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+  *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }   
+  html body{
+     width: 100vw;
+     height: 100vh;
+  }
+
+  .wrrap{
+     width: 400px;
+     height: 100%;
+     position: relative;
+  }
+
+  .wrrap #siderBar{
+     width: 300px;
+     height: 100%;
+     background-color: #404040;
+     position: fixed;
+     overflow: hidden;
+     left: -300px; 
+     transition: all 0.3s linear;
+     -webkit-transition: all 0.3s linear;
+     -moz-transition: all 0.3s linear;
+     -ms-transition: all 0.3s linear;
+     -o-transition: all 0.3s linear;
+  }  
+
+#siderBar .tital
+{
+     font-size: 25px;
+     font-weight: 600;
+     line-height: 65px;
+     text-align: center;
+     background-color:#333 ;
+     color: white;
+} 
+#siderBar .items-lists{
+     position:relative;
+     background-color: #404040;
+     width: 100%;
+     height: 100%;
+     list-style-type: none;
+} 
+.items-lists li{
+     padding-left: 40px;
+     line-height: 50px;
+     border-bottom: 2px solid rgba(225,225,225,0.2) ;
+    
+      
+}  
+ .items-lists li a{
+     color: white;
+     text-decoration: none;
+     height: 100%;
+     width: 100%;
+     font-weight: 600;
+     display: block;
+     
+ }   
+  
+ .items-lists li:hover{
+     
+    box-shadow: 0 0 10px 10px #222;
+ }
+ .items-lists li a i{
+     margin-right: 10px;
+ } 
+ .icons{
+     position:absolute;
+     bottom: 1px;
+     color: white;
+     text-align: center;
+     width: 100%;
+     background-color: #222;
+     padding: 10px 0 20px 0;
+ }
+ .icons .icon{
+    color: wheat;
+    letter-spacing: 30px;
+    font-size: 25px;
+   
+    
+ } 
+ .icons .icon:hover
+ {
+     color: red;
+     transition: all 0.5s linear;
+     -webkit-transition: all 0.5s linear;
+     -moz-transition: all 0.5s linear;
+     -ms-transition: all 0.5s linear;
+     -o-transition: all 0.5s linear;
+} 
+.wrrap .menu-btn{
+     position: absolute;
+     top:0px;
+     right: 350px;
+     z-index: 1;
+     font-size: 30px;
+     cursor: pointer;
+     transition: all 0.3s linear;
+     -webkit-transition: all 0.3s linear;
+     -moz-transition: all 0.3s linear;
+     -ms-transition: all 0.3s linear;
+     -o-transition: all 0.3s linear;
+} 
+input[type="checkbox"]{
+     display: none;
+} 
+#btn:checked ~ .menu-btn i::before{
+    content: "\f00d";   
+}
+/* jab click ho jaye tab isko left se 200px ange shift karna hai  */
+#btn:checked ~ .menu-btn{
+   right: 70px;
+} 
+/* sider ko bhi hume aise lana hai click kar ke position me  */
+#btn:checked ~ #siderBar{
+     left: 2px;
+     transition: all 0.5s linear;
+     -webkit-transition: all 0.5s linear;
+     -moz-transition: all 0.5s linear;
+     -ms-transition: all 0.5s linear;
+     -o-transition: all 0.5s linear;
+}
